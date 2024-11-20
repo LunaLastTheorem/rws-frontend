@@ -1,0 +1,23 @@
+:root{
+	--test-var: blue;
+}
+*,
+*::before,
+*::after{
+	box-sizing: border-box; /*size of the div includes padding, border, and margin*/
+}
+
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.main{
+	flex: 1 0 auto; /* Make it take up the remaining space*/
+}
+
+footer{
+	flex-shrink: 0; /* ensure it stays at the bottom */
+}

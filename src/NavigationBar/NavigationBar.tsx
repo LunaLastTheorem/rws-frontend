@@ -3,12 +3,21 @@ import { TiThMenu } from "react-icons/ti";
 import { IoIosSearch } from "react-icons/io";
 
 
-function NavigationBar(){
+function NavigationBar() {
     return <>
         <div className={styles.header}>
-            <TiThMenu size={30}/>
-            <a href="#"><img src='public\rwslogo.svg'></img></a>
-            <IoIosSearch size={30}/>
+            <div className={styles.headeritem}>
+                <TiThMenu size={30} />
+            </div>
+
+            <div className={styles.headeritem}>
+                <a href="#"><img src='public\rwslogo.png'></img></a>
+            </div>
+
+            <div className={styles.headeritem}>
+                <IoIosSearch size={30} />
+            </div>
+
         </div>
     </>
 }
