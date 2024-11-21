@@ -1,5 +1,5 @@
 .hero {
-    background-image: url("public/banner.png");
+    background-image: url("./public/banner.png");
     background-color: red;
     height: 100%;
 }

@@ -11,7 +11,7 @@ function NavigationBar() {
             </div>
 
             <div className={styles.headeritem}>
-                <a href="#"><img src='public/rwslogo.png'></img></a>
+                <a href="#"><img src='./public/rwslogo.png'></img></a>
             </div>
 
             <div className={styles.headeritem}>
