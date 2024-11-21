@@ -32,7 +32,7 @@ function FooterComp(){
             </div>
 
             <div className= {styles.copyright}>
-                <h3>© 2018 - 2024 CBB Blue Chips. All Rights Reserved.</h3>
+                <h3>© 2023 - 2024 Rose Window Studios. All Rights Reserved.</h3>
             </div>
         </div>
     </>)

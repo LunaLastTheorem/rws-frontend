@@ -4,10 +4,19 @@ import { IoIosSearch } from "react-icons/io";
 
 
 function NavigationBar() {
+
+    const openMenu = () => {
+        console.log("open menu");
+    }
+
+    const openSearch = () => {
+        console.log("open search")
+    }
+
     return <>
         <div className={styles.header}>
             <div className={styles.headeritem}>
-                <TiThMenu className={styles.icon}/>
+                <TiThMenu onClick= {openMenu} className={styles.icon}/>
             </div>
 
             <div className={styles.headeritem}>
@@ -15,7 +24,7 @@ function NavigationBar() {
             </div>
 
             <div className={styles.headeritem}>
-                <IoIosSearch className={styles.icon} />
+                <IoIosSearch onClick = {openSearch} className={styles.icon} />
             </div>
 
         </div>
