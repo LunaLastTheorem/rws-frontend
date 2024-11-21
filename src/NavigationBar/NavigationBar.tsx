@@ -7,7 +7,7 @@ function NavigationBar() {
     return <>
         <div className={styles.header}>
             <div className={styles.headeritem}>
-                <TiThMenu size={30} />
+                <TiThMenu className={styles.icon}/>
             </div>
 
             <div className={styles.headeritem}>
@@ -15,7 +15,7 @@ function NavigationBar() {
             </div>
 
             <div className={styles.headeritem}>
-                <IoIosSearch size={30} />
+                <IoIosSearch className={styles.icon} />
             </div>
 
         </div>
