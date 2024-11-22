@@ -1,6 +1,7 @@
 import styles from './Navigation.module.css'
 import { TiThMenu } from "react-icons/ti";
 import { IoIosSearch } from "react-icons/io";
+import logo from "/public/rwslogo.png";
 
 
 function NavigationBar() {
@@ -21,7 +22,7 @@ function NavigationBar() {
             </div>
 
             <div className={styles.headeritem}>
-                <a href="#"><img src='./rwslogo.png'></img></a>
+                <a href="#"><img src={logo}></img></a>
             </div>
 
             <div className={styles.headeritem + ' ' + styles.rightbutton}>

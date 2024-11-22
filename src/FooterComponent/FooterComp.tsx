@@ -1,11 +1,12 @@
 import styles from "./FooterComp.module.css"
+import logo from "/public/rwslogo.png";
 
 function FooterComp(){
     return (<>
         <div className= {styles.foot}>
             <div className= {styles.top}>
                 <div className= {styles.title}>
-                    <img src="./rwslogo.png" />
+                    <img src={logo} />
                 </div>
                 <div className= {styles.links}>
                     <ul id="contact">
