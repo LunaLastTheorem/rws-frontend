@@ -15,16 +15,17 @@ function NavigationBar() {
 
     return <>
         <div className={styles.header}>
-            <div className={styles.headeritem}>
-                <TiThMenu onClick= {openMenu} className={styles.icon}/>
+            <div className={styles.headeritem + ' ' + styles.leftbutton} >
+                <TiThMenu onClick= {openMenu} className={styles.icon} size={30}/>
+                <h1>Menu</h1>
             </div>
 
             <div className={styles.headeritem}>
                 <a href="#"><img src='./public/rwslogo.png'></img></a>
             </div>
 
-            <div className={styles.headeritem}>
-                <IoIosSearch onClick = {openSearch} className={styles.icon} />
+            <div className={styles.headeritem + ' ' + styles.rightbutton}>
+                <IoIosSearch onClick = {openSearch} className={styles.icon} size={30}/>
             </div>
 
         </div>

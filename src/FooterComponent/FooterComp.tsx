@@ -8,19 +8,9 @@ function FooterComp(){
                     <img src="./public/rwslogo.png" />
                 </div>
                 <div className= {styles.links}>
-                    <ul id="help">
-                        <li>help</li>
-                        <li>how to play</li>
-                        <li>calculator</li>
-                        <li>faq</li>
-                    </ul>
                     <ul id="contact">
                         <li>contact</li>
-                        <li>facebook</li>
-                        <li>twitter</li>
-                        <li>discord</li>
                         <li>email</li>
-                        <li>feedback</li>
                     </ul>
                     <ul id="legal">
                         <li>legal</li>
