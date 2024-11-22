@@ -5,7 +5,7 @@ function FooterComp(){
         <div className= {styles.foot}>
             <div className= {styles.top}>
                 <div className= {styles.title}>
-                    <img src="./public/rwslogo.png" />
+                    <img src="./rwslogo.png" />
                 </div>
                 <div className= {styles.links}>
                     <ul id="contact">
