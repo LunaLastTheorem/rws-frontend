@@ -1,13 +1,14 @@
 :root {
-    --navBarHeight: 10vh;
+    --navbar-height: 10vh;
     --navbar-padding: 2rem;
+    --navbar-z-index: 100;
 }
 
 .navbar {
     position: fixed;
     top: 0;
     min-width: 100%;
-    max-height: var(--navBarHeight);
+    max-height: var(--navbar-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,12 +16,12 @@
     background: transparent;
     background: black;
     padding: 0 var(--navbar-padding);
-    z-index: 100;
+    z-index: var(--navbar-z-index);
 }
 
 img {
     width: 100%;
-    max-height: var(--navBarHeight);
+    max-height: var(--navbar-height);
     object-fit: cover;
 }
 

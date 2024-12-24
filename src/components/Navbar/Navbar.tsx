@@ -3,6 +3,7 @@ import style from './NavBar.module.css';
 import logo from '/rwslogo.svg';
 import { Squash as Hamburger } from 'hamburger-react'
 import { CiSearch } from "react-icons/ci";
+import SearchBar from './SearchBar/SearchBar';
 
 function Navbar() {
 
@@ -54,15 +55,18 @@ function Navbar() {
     }
 
     return (
-        <nav className={style.navbar}>
-            <div id='menu' className={style.menuButton}>
-                <Hamburger toggled={menuBar} toggle={handleClick} duration={0.5} color='white' />
-            </div>
-            <a href="#">
-                <img src={logo} alt="logo" />
-            </a>
-            <CiSearch id="search" onClick={handleClick2} color='white' size="2rem" />
-        </nav>
+        <>
+            {/* <SearchBar /> */}
+            <nav className={style.navbar}>
+                <div id='menu' className={style.menuButton}>
+                    <Hamburger toggled={menuBar} toggle={handleClick} duration={0.5} color='white' />
+                </div>
+                <a href="#">
+                    <img src={logo} alt="logo" />
+                </a>
+                <CiSearch id="search" onClick={handleClick2} color='white' size="2rem" />
+            </nav>
+        </>
     );
 }
 
