@@ -1,5 +1,6 @@
 :root {
     --navBarHeight: 10vh;
+    --navbar-padding: 2rem;
 }
 
 .navbar {
@@ -12,16 +13,17 @@
     align-items: center;
     /* border: 1px solid red; */
     background: transparent;
-
-    background: rgba(0, 0, 0, 0.75);
-    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    border-radius: 0 0 10px 10px;
+    background: black;
+    padding: 0 var(--navbar-padding);
+    z-index: 100;
 }
 
 img {
     width: 100%;
     max-height: var(--navBarHeight);
     object-fit: cover;
+}
+
+.menuButton {
+    z-index: 999;
 }

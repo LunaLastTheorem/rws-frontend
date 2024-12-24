@@ -1,10 +1,18 @@
 import styles from './HeroSection.module.css';
+import HeroSectionTitle from './HeroSectionTitle/HeroSectionTitle';
+import video from '/tunnelpreview.mp4';
 
 function HeroSection() {
     return (
         <div className={styles.hero}>
-            <h1>Hero Section</h1>
-            <p>This is the Hero Section</p>
+            <video autoPlay loop muted id='myVideo'>
+                <source src={video} type="video/mp4" />
+            </video>
+            <div className={styles.content}>
+                <HeroSectionTitle title='The Tunnel' year='2024' />
+                <HeroSectionTitle title='Clockwise' year='2024' />
+                <HeroSectionTitle />
+            </div>
         </div>
     );
 }

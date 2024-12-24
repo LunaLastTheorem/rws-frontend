@@ -1,30 +1,67 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import style from './NavBar.module.css';
 import logo from '/rwslogo.svg';
+import { Squash as Hamburger } from 'hamburger-react'
+import { CiSearch } from "react-icons/ci";
 
 function Navbar() {
 
-    const [menubar, openMenuBar] = useState(true);
-    const [searchBar, openSearchBar] = useState(true);
+    const [menuBar, openMenuBar] = useState(false);
+    const [searchBar, openSearchBar] = useState(false);
+
+    useEffect(() => {
+        console.log(menuBar ? 'Menu Open' : 'Menu Closed');
+        const toggableMenu = document.getElementById('toggableMenu');
+        if (toggableMenu) {
+            if (menuBar) {
+                toggableMenu.style.display = 'flex';
+                toggableMenu.animate([
+                    { transform: 'translateX(-100%)' },
+                    { transform: 'translateX(0)' }
+                ], {
+                    duration: 500,
+                    fill: 'forwards'
+                })
+            }
+            else {
+                toggableMenu.animate([
+                    { transform: 'translateX(0)' },
+                    { transform: 'translateX(-100%)' }
+                ], {
+                    duration: 500,
+                    fill: 'forwards'
+                })
+                setTimeout(() => {
+                    toggableMenu.style.display = 'none';
+
+                }, 500);
+            }
+
+        }
+    }, [menuBar]);
+
+    useEffect(() => {
+        console.log(searchBar ? 'Search Open' : 'Search Closed');
+
+    }, [searchBar]);
 
     const handleClick = () => {
-        console.log(menubar);
-        openMenuBar(!menubar);
-        console.log(menubar ? 'Menu is open' : 'Menu is closed');
+        openMenuBar(!menuBar);
     }
 
     const handleClick2 = () => {
-        console.log(searchBar);
-
         openSearchBar(!searchBar);
-        console.log(searchBar ? 'Search is open' : 'Search is closed');
     }
 
     return (
         <nav className={style.navbar}>
-            <button onClick={handleClick}>Menu</button>
-            <a href="#"><img src={logo} alt="logo"></img></a>
-            <button onClick={handleClick2}>Search</button>
+            <div id='menu' className={style.menuButton}>
+                <Hamburger toggled={menuBar} toggle={handleClick} duration={0.5} color='white' />
+            </div>
+            <a href="#">
+                <img src={logo} alt="logo" />
+            </a>
+            <CiSearch id="search" onClick={handleClick2} color='white' size="2rem" />
         </nav>
     );
 }

@@ -1,0 +1,23 @@
+:root {
+    --hero-font-size: 6rem;
+}
+
+.title {
+    font-size: var(--hero-font-size);
+    color: white;
+}
+
+.year {
+    vertical-align: super;
+    font-size: 0.25em;
+}
+
+h1:hover {
+    color: lightgray;
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 1.5rem;
+}
