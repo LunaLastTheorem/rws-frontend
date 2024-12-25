@@ -5,23 +5,44 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 25%;
     background-color: black;
     height: var(--navbar-height);
     z-index: 100;
 }
 
+.searchBarContainer {
+    display: flex;
+    flex-direction: row;
+    margin: 0 2.5rem;
+}
+
 input[type="text"] {
     width: 90%;
     padding: 0.25rem;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
+    margin: 0.5rem 0;
     font-size: 16px;
     background-color: black;
     color: white;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
 }
 
+.searchButton {
+    margin: 0.5rem 0;
+    background-color: black;
+    color: white;
+    border: 2px;
+    border-color: white;
+    border-style: solid;
+    border-left-style: none;
+}
+
+.searchButton:hover {
+    color: darkgray;
+    cursor: pointer;
+    background-color: var(--rws-primary);
+}
 
 svg {
     height: 100%;

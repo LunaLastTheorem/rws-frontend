@@ -1,5 +1,7 @@
 :root {
     --test-var: blue;
+    --rws-secondary: #e64e50;
+    --rws-primary: #d62229;
 }
 
 *,

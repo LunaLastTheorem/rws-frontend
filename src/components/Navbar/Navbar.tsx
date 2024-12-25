@@ -9,6 +9,7 @@ function Navbar() {
 
     const [searchBar, openSearchBar] = useState(false);
     const [menuBar, openMenuBar] = useState(false);
+    const duration = 300;
 
     useEffect(() => {
         console.log(menuBar ? 'Menu Open' : 'Menu Closed');
@@ -20,7 +21,7 @@ function Navbar() {
                     { transform: 'translateX(-100%)' },
                     { transform: 'translateX(0)' }
                 ], {
-                    duration: 500,
+                    duration: duration,
                     fill: 'forwards'
                 })
             }
@@ -29,13 +30,13 @@ function Navbar() {
                     { transform: 'translateX(0)' },
                     { transform: 'translateX(-100%)' }
                 ], {
-                    duration: 500,
+                    duration: duration,
                     fill: 'forwards'
                 })
                 setTimeout(() => {
                     toggableMenu.style.display = 'none';
 
-                }, 500);
+                }, duration);
             }
 
         }
@@ -43,14 +44,40 @@ function Navbar() {
 
     useEffect(() => {
         console.log(searchBar ? 'Search Open' : 'Search Closed');
+        const toggableSearchBar = document.getElementById("searchcontainer");
+        if (toggableSearchBar) {
+            if (searchBar) {
+                toggableSearchBar.style.display = 'flex';
+                toggableSearchBar.animate([
+                    { transform: 'translateY(-100%)' },
+                    { transform: 'translateY(0)' }
+                ], {
+                    duration: 250,
+                    fill: 'forwards'
+                })
+            }
+            else {
+                toggableSearchBar.animate([
+                    { transform: 'translateY(0)' },
+                    { transform: 'translateY(-100%)' }
+                ], {
+                    duration: 250,
+                    fill: 'forwards'
+                })
+                setTimeout(() => {
+                    toggableSearchBar.style.display = 'none';
+
+                }, 250);
+            }
+        }
 
     }, [searchBar]);
 
-    const handleClick = () => {
+    const toggleMenuBar = () => {
         openMenuBar(!menuBar);
     }
 
-    const handleClick2 = () => {
+    const toggleSearchBar = () => {
         openSearchBar(!searchBar);
     }
 
@@ -59,12 +86,12 @@ function Navbar() {
             <SearchBar />
             <nav className={style.navbar}>
                 <div id='menu' className={style.menuButton}>
-                    <Hamburger toggled={menuBar} toggle={handleClick} duration={0.5} color='white' />
+                    <Hamburger toggled={menuBar} toggle={toggleMenuBar} duration={duration / 1000} color='white' />
                 </div>
                 <a href="#">
                     <img src={logo} alt="logo" />
                 </a>
-                <CiSearch className={style.search} onClick={handleClick2} color='white' size="2rem" />
+                <CiSearch className={style.search} onClick={toggleSearchBar} color='white' size="2rem" />
             </nav>
         </>
     );
