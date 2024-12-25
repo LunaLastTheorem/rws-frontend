@@ -1,6 +1,6 @@
 import styles from './HeroSection.module.css';
 import HeroSectionTitle from './HeroSectionTitle/HeroSectionTitle';
-import video from '/videos/tunnelpreview.mp4';
+import video from '/videos/clockwise-preview.mp4';
 
 function HeroSection() {
     return (

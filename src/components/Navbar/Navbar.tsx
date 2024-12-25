@@ -7,8 +7,8 @@ import SearchBar from './SearchBar/SearchBar';
 
 function Navbar() {
 
-    const [menuBar, openMenuBar] = useState(false);
     const [searchBar, openSearchBar] = useState(false);
+    const [menuBar, openMenuBar] = useState(false);
 
     useEffect(() => {
         console.log(menuBar ? 'Menu Open' : 'Menu Closed');
@@ -56,7 +56,7 @@ function Navbar() {
 
     return (
         <>
-            {/* <SearchBar /> */}
+            <SearchBar />
             <nav className={style.navbar}>
                 <div id='menu' className={style.menuButton}>
                     <Hamburger toggled={menuBar} toggle={handleClick} duration={0.5} color='white' />
@@ -64,7 +64,7 @@ function Navbar() {
                 <a href="#">
                     <img src={logo} alt="logo" />
                 </a>
-                <CiSearch id="search" onClick={handleClick2} color='white' size="2rem" />
+                <CiSearch className={style.search} onClick={handleClick2} color='white' size="2rem" />
             </nav>
         </>
     );

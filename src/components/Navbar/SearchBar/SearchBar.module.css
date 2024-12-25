@@ -1,20 +1,19 @@
 .searchBar {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: var(--navbar-height);
+    right: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100%;
-    padding: 1rem var(--navbar-padding);
+    min-width: 25%;
     background-color: black;
     height: var(--navbar-height);
     z-index: 100;
 }
 
 input[type="text"] {
-    width: 75%;
-    padding: 10px;
+    width: 90%;
+    padding: 0.25rem;
     margin: 8px 0;
     box-sizing: border-box;
     border: 2px solid #ccc;
