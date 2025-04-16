@@ -37,3 +37,7 @@ img {
 .search {
     cursor: pointer;
 }
+
+.searchInv {
+    visibility: hidden;
+}

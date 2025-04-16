@@ -4,15 +4,24 @@ function HeroSectionTitle(
     {
         title = "Placeholder",
         year = "Soon",
-        link = "#"
+        link = "#",
+        onHover
+
     }: {
         title?: string,
         year?: string,
-        link?: string
+        link?: string,
+        onHover?: (title: string) => void
     }) {
 
+    const handleMouseEnter = () => {
+        console.log(`hovering on ${title}`);
+
+        if (onHover && title) onHover(title);
+    };
+
     return (
-        <a href={link}>
+        <a href={link} onMouseEnter={handleMouseEnter}>
             <h1 className={style.title} > {title} <span className={style.year}>{year}</span></h1>
         </a>
     );

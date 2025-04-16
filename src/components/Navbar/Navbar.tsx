@@ -81,6 +81,10 @@ function Navbar() {
         openSearchBar(!searchBar);
     }
 
+    const doNothing = () => {
+        console.log("secret!")
+    }
+
     return (
         <>
             <SearchBar />
@@ -91,7 +95,8 @@ function Navbar() {
                 <a href="#">
                     <img src={logo} alt="logo" />
                 </a>
-                <CiSearch className={style.search} onClick={toggleSearchBar} color='white' size="2rem" />
+                {/* <CiSearch className={style.search} onClick={toggleSearchBar} color='white' size="2rem" /> */}
+                <CiSearch className={style.searchInv} onClick={doNothing} color='white' size="2rem" />
             </nav>
         </>
     );
