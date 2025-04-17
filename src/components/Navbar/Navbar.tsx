@@ -78,12 +78,13 @@ function Navbar() {
     }
 
     const toggleSearchBar = () => {
+        console.log("points!");
         openSearchBar(!searchBar);
     }
 
-    const doNothing = () => {
-        console.log("secret!")
-    }
+    // const doNothing = () => {
+    //     console.log("secret!")
+    // }
 
     return (
         <>
@@ -95,8 +96,8 @@ function Navbar() {
                 <a href="#">
                     <img src={logo} alt="logo" />
                 </a>
-                {/* <CiSearch className={style.search} onClick={toggleSearchBar} color='white' size="2rem" /> */}
-                <CiSearch className={style.searchInv} onClick={doNothing} color='white' size="2rem" />
+                <CiSearch className={style.searchInv} onClick={toggleSearchBar} color='white' size="2rem" />
+                {/* <CiSearch className={style.searchInv} onClick={doNothing} color='white' size="2rem" /> */}
             </nav>
         </>
     );

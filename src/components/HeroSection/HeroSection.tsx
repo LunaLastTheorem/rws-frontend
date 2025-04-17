@@ -33,7 +33,7 @@ function HeroSection() {
             <div className={styles.content}>
                 <HeroSectionTitle onHover={handleHover} title='The Tunnel' year='2024' link="https://youtu.be/p2JNJF3TxZE?si=BNeYIfdFqWHzDF3A" />
                 <HeroSectionTitle onHover={handleHover} title='Clockwise' year='2024' link="https://youtu.be/oyr1xsTfuTU?si=2jDCGg83oIPNbodZ" />
-                <HeroSectionTitle onHover={handleHover} title='Premire' year='2025' link="#" />
+                <HeroSectionTitle onHover={handleHover} title='Premiere' year='2025' link="#" />
             </div>
         </div>
     );
