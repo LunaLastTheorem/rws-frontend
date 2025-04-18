@@ -1,5 +1,5 @@
 import Footer from "../components/Footer";
-import Grid from "../components/Grid";
+import AboutUs from "../components/AboutUs/AboutUs";
 import HeroSection from "../components/HeroSection/HeroSection";
 import Navbar from "../components/Navbar/Navbar";
 import ResponsiveMenu from "../components/ResponsiveMenu/ResponsiveMenu";
@@ -12,7 +12,7 @@ function Home() {
             <Navbar />
             <HeroSection />
             <ResponsiveMenu />
-            <Grid />
+            <AboutUs />
             <Footer />
         </div>
     );
