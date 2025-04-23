@@ -1,7 +1,7 @@
 .wrapper {
+    margin-top: 2rem;
     width: 100%;
-    background: radial-gradient(circle at top left, #1e1e1e, #121212);
-    color: #f5f5f5;
+    color: black;
     line-height: 1.6;
 }
 
@@ -19,6 +19,10 @@ h5 {
     text-align: center;
 }
 
+.wrapper h1:hover {
+    color: black;
+}
+
 .wrapper .centerText {
     margin-left: 10%
 }
@@ -27,7 +31,7 @@ h5 {
     font-size: 1.5rem;
     font-weight: 400;
     margin-bottom: 1.5rem;
-    color: #ccc;
+    color: black;
 }
 
 .wrapper h3 {
@@ -40,7 +44,7 @@ h5 {
 .wrapper h4 {
     font-size: 1.1rem;
     margin-top: 2rem;
-    color: #b0bec5;
+    color: black;
     font-style: italic;
     text-align: center;
 }
@@ -52,12 +56,13 @@ h5 {
 }
 
 .wrapper a {
-    color: white;
+    color: black;
     text-decoration: none;
     padding: 0;
 }
 
 .wrapper a:hover {
+    color: var(--rws-primary);
     transform: scale(2, 5);
 }
 

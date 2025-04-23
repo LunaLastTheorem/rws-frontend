@@ -15,7 +15,7 @@ const videoList: Video[] = [
     },
     {
         video: clockwiseVid,
-        title: "clockwise",
+        title: "Clockwise",
         releaseDate: "2024",
         link: "https://youtu.be/oyr1xsTfuTU?si=2jDCGg83oIPNbodZ"
     },
@@ -36,7 +36,7 @@ function HeroSection() {
     const handleHover = (title: string) => {
         const videoItem = videoList.find(v => v.title === title);
         const video = videoItem?.video;
-        if (video && window.scrollY === 0) setCurrentVideo(video);
+        if (window.scrollY === 0 && video) setCurrentVideo(video);
         else setCurrentVideo(defaultVid);
     }
 
