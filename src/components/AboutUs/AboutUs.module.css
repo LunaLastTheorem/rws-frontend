@@ -21,6 +21,31 @@ h5 {
 
 .wrapper h1:hover {
     color: black;
+    animation: coolshadow 10s infinite;
+}
+
+@keyframes coolshadow {
+    0% {
+        text-shadow: 20px 9px 4px #3A3A3A;
+    }
+
+    25% {
+        text-shadow: 20px -9px 8px #3A3A3A;
+    }
+
+    50% {
+        text-shadow: -20px -9px 16px #3A3A3A;
+
+    }
+
+    75% {
+        text-shadow: -20px 9px 8px #3A3A3A;
+
+    }
+
+    100% {
+        text-shadow: 20px 9px 4px #3A3A3A;
+    }
 }
 
 .wrapper .centerText {
