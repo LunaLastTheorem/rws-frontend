@@ -27,7 +27,6 @@ const videoList: Video[] = [
     }
 ]
 
-
 function HeroSection() {
     const [currentVideo, setCurrentVideo] = useState(clockwiseVid);
     const videoRef = useRef<HTMLVideoElement>(null);
